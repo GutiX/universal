@@ -4,12 +4,12 @@
 
 * __Name__: cloud4Firefox
 * __Id__: org.mozilla.cloud4firefox
-* __Platform__: Web
+* __Platform__: Tested on MS Windows and GNU/Linux (it should also work on Mac OSX)
 * __Contact__: José Antonio Gutiérrez Dueñas <jagutierrez@consultoria.ilunion.com>
 
 ## Description
 The Firefox extension for Firefox is a component installable in the web browser. This extension establishes a connection with GPII to get the active preferences. These preferences are used, by the extension, to adapt the web browser content, I mean, the web site interfaces.
-
+The Firefox extension can work autonomously, with cloud-based flowManager, or by local flowManager.
 Useful links:
 
   * [Firefox extensions developer](https://developer.mozilla.org/en-US/Add-ons)
