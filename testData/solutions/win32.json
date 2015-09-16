@@ -1321,7 +1321,7 @@
 
     },
 	
-    "org.mozilla.cloud4firefox": {
+    "com.ilunion.cloud4firefox": {
         "name": "Cloud4all firefox extension",
         "contexts": {
             "OS": [{
@@ -1333,10 +1333,10 @@
            {
                 "type": "gpii.settingsHandlers.webSockets",
                 "options": {
-                    "path": "org.mozilla.cloud4firefox"
+                    "path": "com.ilunion.cloud4firefox"
                 },
                 "capabilities": [
-                    "applications.org\\.mozilla\\.cloud4firefox.id"
+                    "applications.com\\.ilunion\\.cloud4firefox.id"
                 ],
                 "capabilitiesTransformations": {
                     "screenReaderTTSEnabled":"http://registry\\.gpii\\.net/common/screenReaderTTSEnabled",

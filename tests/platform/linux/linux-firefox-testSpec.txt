@@ -1,9 +1,9 @@
-windows-firefox-testSpec.txt
+linux-firefox-testSpec.txt
 
 Descriptions:
 
 * Solution: Cloud4all's Firefox extension for Mozilla Firefox (cloud4firefox)
-* Configuration file: windows-firefox-config.json
+* Configuration file: linux-firefox-config.json
 * Device reporter file: firefox.json
 * NP sets:
  * firefox_high_contrast

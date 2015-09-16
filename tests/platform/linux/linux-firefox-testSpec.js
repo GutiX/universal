@@ -16,11 +16,11 @@ var fluid = require("universal"),
 
 gpii.loadTestingSupport();
 
-fluid.registerNamespace("gpii.tests.windows.firefox");
+fluid.registerNamespace("gpii.tests.linux.firefox");
 
 
 
-gpii.tests.windows.firefox = [
+gpii.tests.linux.firefox = [
     {
         name: "Acceptance test for background color, line height and text size change in firefox",
         userToken: "firefox_high_contrast",
@@ -51,8 +51,8 @@ gpii.tests.windows.firefox = [
 ];
 
 module.exports = gpii.test.bootstrap({
-    testDefs:  "gpii.tests.windows.firefox",
-    configName: "windows-firefox-config",
+    testDefs:  "gpii.tests.linux.firefox",
+    configName: "linux-firefox-config",
     configPath: "configs"
-}, ["gpii.test.integration.testCaseHolder.windows"],
+}, ["gpii.test.integration.testCaseHolder.linux"],
     module, require, __dirname);

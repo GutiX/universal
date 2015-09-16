@@ -1437,75 +1437,79 @@
             ]
         }
     },
-    "org.chrome.cloud4chrome": {
-        "name": "Cloud4all Chrome extension",
+	
+    "com.ilunion.cloud4firefox": {
+        "name": "Cloud4all firefox extension",
         "contexts": {
             "OS": [{
-                "id": "linux",
-                "version": ">=2.6.26"
+                    "id": "linux",
+                    "version": ">=2.6.26"
             }]
         },
         "settingsHandlers": [
            {
                 "type": "gpii.settingsHandlers.webSockets",
                 "options": {
-                    "path": "org.chrome.cloud4chrome"
+                    "path": "com.ilunion.cloud4firefox"
                 },
                 "capabilities": [
-                    "applications.org\\.chrome\\.cloud4chrome.id",
-                    "contrastTheme",
-                    "fontSize"
+                    "applications.com\\.ilunion\\.cloud4firefox.id"
                 ],
                 "capabilitiesTransformations": {
-                    "screenReaderTTSEnabled": "http://registry\\.gpii\\.net/common/screenReaderTTSEnabled",
+                    "screenReaderTTSEnabled":"http://registry\\.gpii\\.net/common/screenReaderTTSEnabled",
+                    "magnifierEnabled": "http://registry\\.gpii\\.net/common/magnifierEnabled",
+                    "magnification": "http://registry\\.gpii\\.net/common/magnification",
                     "fontSize": {
                         "transform":{
-                            "type": "gpii.transformer.quantize",
-                            "inputPath": "http://registry\\.gpii\\.net/common/fontSize",
-                            "input": 9,
-                            "ranges": [
+                            "type":"gpii.transformer.quantize",
+                            "inputPath":"http://registry\\.gpii\\.net/common/fontSize",
+                            "ranges":[
                                 {
-                                    "upperBound": 12,
-                                    "output": "medium"
+                                    "upperBound":14,
+                                    "output":"M"
                                 },
                                 {
-                                    "upperBound": 18,
-                                    "output": "large"
+                                    "upperBound":24,
+                                    "output":"L"
                                 },
                                 {
-                                    "output": "x-large"
+                                    "output":"XL"
                                 }
                             ]
                         }
                     },
-                    "magnifierEnabled": "http://registry\\.gpii\\.net/common/magnifierEnabled",
-                    "magnification": {
+                    "backgroundColour": {
                         "transform": {
-                            "type": "gpii.transformer.quantize",
-                            "inputPath": "http://registry\\.gpii\\.net/common/magnification",
-                            "input": 1,
-                            "ranges": [
-                                {
-                                    "upperBound": 1.2,
-                                    "output": 1
-                                },
-                                {
-                                    "upperBound": 2.5,
-                                    "output": 2
-                                },
-                                {
-                                    "output": 3
-                                }
-                            ]
+                            "type": "fluid.transforms.valueMapper",
+                            "inputPath": "http://registry\\.gpii\\.net/common/highContrastTheme",
+                            "options": {
+                                "white-black": "#000000",
+                                "black-white": "#FFFFFF",
+                                "yellow-black": "#000000",
+                                "black-yellow": "#FFFF00"
+                            }
                         }
                     },
-                    "highContrastEnabled": "http://registry\\.gpii\\.net/common/highContrastEnabled",
-                    "highContrastTheme": "http://registry\\.gpii\\.net/common/highContrastTheme",
-                    "invertColours": "http://registry\\.gpii\\.net/common/invertColours"
+                    "foregroundColour": {
+                        "transform": {
+                            "type": "fluid.transforms.valueMapper",
+                            "inputPath": "http://registry\\.gpii\\.net/common/highContrastTheme",
+                            "options": {
+                                "white-black": "#FFFFFF",
+                                "black-white": "#000000",
+                                "yellow-black": "#FFFF00",
+                                "black-yellow": "#000000"
+                            }
+                        }
+                    },
+					
+					"highContrastEnabled": "http://registry\\.gpii\\.net/common/highContrastEnabled",
+                    "invertColours": "http://registry\\.gpii\\.net/common/invertColours",
+                    "tracking":"display.screenEnhancement.tracking"
                 }
            }
         ],
-        "lifecycleManager": {
+        "lifecycleManager" : {
             "start": [
                 "setSettings"
             ],

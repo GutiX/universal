@@ -1,5 +1,5 @@
 {
-    "typeName": "acceptanceTests.windows.firefox",
+    "typeName": "acceptanceTests.linux.firefox",
     "options": {
         "components": {
             "server": {
