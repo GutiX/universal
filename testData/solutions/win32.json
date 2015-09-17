@@ -1329,8 +1329,8 @@
                     "version": ">=5.0"
             }]
         },
-        "settingsHandlers": [
-           {
+        "settingsHandlers": {
+            "firefoxconf": {
                 "type": "gpii.settingsHandlers.webSockets",
                 "options": {
                     "path": "com.ilunion.cloud4firefox"
@@ -1390,19 +1390,17 @@
                     "invertColours": "http://registry\\.gpii\\.net/common/invertColours",
                     "tracking":"display.screenEnhancement.tracking"
                 }
-           }
+            }
+        },
+        "configure": [
+            "settings.firefoxconf"
         ],
-        "lifecycleManager" : {
-            "start": [
-                "setSettings",
-                {
-                    "type": "gpii.launch.exec",
-                    "command": "\"${{registry}.HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\App Paths\\firefox.exe\\}\" http://wiki.gpii.net/"
-                }
-            ],
-            "stop": [
-                "restoreSettings"
-            ]
-        }
+        "restore": [
+            "settings.firefoxconf"
+        ],
+        "start": [
+        ],
+        "stop": [
+        ]
     }
 }

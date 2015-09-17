@@ -1446,8 +1446,8 @@
                     "version": ">=2.6.26"
             }]
         },
-        "settingsHandlers": [
-           {
+        "settingsHandlers": {
+            "firefoxconf": {
                 "type": "gpii.settingsHandlers.webSockets",
                 "options": {
                     "path": "com.ilunion.cloud4firefox"
@@ -1507,15 +1507,17 @@
                     "invertColours": "http://registry\\.gpii\\.net/common/invertColours",
                     "tracking":"display.screenEnhancement.tracking"
                 }
-           }
+            }
+        },
+        "configure": [
+            "settings.firefoxconf"
         ],
-        "lifecycleManager" : {
-            "start": [
-                "setSettings"
-            ],
-            "stop": [
-                "restoreSettings"
-            ]
-        }
+        "restore": [
+            "settings.firefoxconf"
+        ],
+        "start": [
+        ],
+        "stop": [
+        ]
     }
 }
