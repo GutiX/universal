@@ -1,0 +1,23 @@
+{
+    "flat": {
+        "contexts": {
+            "gpii-default": {
+                "name": "Default preferences",
+                "preferences": {
+                    "http://registry.gpii.net/applications/com.ilunion.cloud4firefox": {
+                        "screenReaderTTSEnabled": false,
+                        "highContrastEnabled": true,
+                        "invertColours": false,
+                        "magnifierEnabled": false,
+                        "magnification": 1,
+                        "fontSize": "L",
+                        "simplifier": false,
+						"lineheight": 2.5,
+						"backgroundColour": "#000000",
+                        "foregroundColour": "#FFFF00"
+                    }
+                }
+            }
+        }
+    }
+}

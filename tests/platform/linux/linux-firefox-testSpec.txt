@@ -6,4 +6,5 @@ Descriptions:
 * Configuration file: linux-firefox-config.json
 * Device reporter file: firefox.json
 * NP sets:
- * firefox_high_contrast
+ * firefox_yellow_over_black
+ * firefox_magnification_fontface

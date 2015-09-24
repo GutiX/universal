@@ -22,22 +22,51 @@ fluid.registerNamespace("gpii.tests.windows.firefox");
 
 gpii.tests.windows.firefox = [
     {
-        name: "Acceptance test for background color, line height and text size change in firefox",
-        userToken: "firefox_high_contrast",
+        name: "Acceptance test for background and foreground color, line height and text size change in firefox",
+        userToken: "firefox_yellow_over_black",
         settingsHandlers: {
             "gpii.settingsHandlers.webSockets": {
                 "data": [
                     {
                         "settings": {
-							"highContrastEnabled": true,
-							"invertColours": false,
-							"magnifierEnabled": false,
-							"magnification": 1,
-							"fontSize": "L",
-							"simplifier": false,
-							"lineheight": 3,
-							"backgroundColour": "#000000",
-							"foregroundColour": "#FFFF00"
+							"screenReaderTTSEnabled": false,
+                            "highContrastEnabled": true,
+                            "invertColours": false,
+                            "magnifierEnabled": false,
+                            "magnification": 1,
+                            "fontSize": "L",
+                            "simplifier": false,
+						    "lineheight": 2.5,
+						    "backgroundColour": "#000000",
+                            "foregroundColour": "#FFFF00"
+                        },
+                        "options": {
+                            "path": "com.ilunion.cloud4firefox"
+                        }
+                    }
+                ]
+            }
+        },
+        processes: []
+    },
+	{
+        name: "Acceptance test for magnification, cursor size and font face changes in firefox",
+        userToken: "firefox_magnification_fontface",
+        settingsHandlers: {
+            "gpii.settingsHandlers.webSockets": {
+                "data": [
+                    {
+                        "settings": {
+							"screenReaderTTSEnabled": false,
+                            "highContrastEnabled": false,
+                            "invertColours": false,
+                            "magnifierEnabled": true,
+                            "magnification": 2.5,
+                            "fontSize": "M",
+                            "simplifier": false,
+						    "lineheight": 1.4,
+						    "cursorSize": "large",
+						    "fontFace": "Courier"
                         },
                         "options": {
                             "path": "com.ilunion.cloud4firefox"

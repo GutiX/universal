@@ -12,7 +12,7 @@ The Cloud4firefox extension for Firefox is a component installable in the web br
 The Cloud4firefox extension can work autonomously, with cloud-based flowManager, or by local flowManager.
 Useful links:
 
-  * [Cloud4firefox extensions developer](https://developer.mozilla.org/en-US/Add-ons)
+  * [Firefox extensions developer documentation](https://developer.mozilla.org/en-US/Add-ons)
   * [Source code at github.com](https://github.com/GutiX/firefox4cloud)
 
 ## Integration
@@ -29,8 +29,14 @@ When using a NP set that makes use of the cloud4firefox extension, the Firefox b
 One user profiles with a set of Needs & Preferences have been provided in order to properly perform the tests.
 These user profiles have as follows:
 
-### Firefox
-NP set located at universal's testData/preferences/firefox.json
+### Firefox1
+NP set located at universal's testData/preferences/firefox1.json
 
-  * When logging in, Firefox browser should be started automatically and you should see the magnification theme.
+  * When logging in, Firefox browser should show high contrast theme with the background black and the foreground yellow, the font size large and a line height of 250%.
+  * When logging out, default settings will be restored.
+  
+### Firefox2
+NP set located at universal's testData/preferences/firefox2.json
+
+  * When logging in, Firefox browser should show with the magnification active expanded a 250%, the cursor size large and the font face Courier.
   * When logging out, default settings will be restored.
