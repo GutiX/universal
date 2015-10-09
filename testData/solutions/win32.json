@@ -1388,8 +1388,7 @@
                             }
                         }
                     },
-					
-					"highContrastEnabled": "http://registry\\.gpii\\.net/common/highContrastEnabled",
+                    "highContrastEnabled": "http://registry\\.gpii\\.net/common/highContrastEnabled",
                     "invertColours": "http://registry\\.gpii\\.net/common/invertColours",
                     "tracking":"display.screenEnhancement.tracking"
                 }
